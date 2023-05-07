@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script defer type="module">
+            import { Parent } from 'https://unpkg.com/liaison-core/lib/index.js'
+            const p = Parent({
+                iframeOpts: {
+                    id: 'my-embedded-iframe',
+                    containerId: 'my-embedded-iframe-container',
+                    src: 'http://localhost:5501',
+                    classes: ['iframe'],
+                },
+                effects: {
+                    sayHiFromParent: () => console.log('Hello from Parent!')
+                }
+            });
+            p.init();
+
+            const button = document.getElementById('btn');
+            button.onclick = () => {
+                console.log('p: ', p)
+                p.callIFrameEffect({ name: 'sayHiFromIFrame', args: {} })
+            }
+        </script>
+    </head>
+    <body>
+        <div id="my-embedded-iframe-container">
+            <h2>Parent</h2>
+            <button id="btn">Send message to iframe</button>
+        </div>
+    </body>
+</html>
