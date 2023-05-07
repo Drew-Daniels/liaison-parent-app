@@ -1,4 +1,4 @@
-import { Parent } from 'https://unpkg.com/liaison-core/lib/index.js'
+import { Parent } from 'https://unpkg.com/liaison-core@latest/lib/index.js'
 
 const parent = Parent({
     iframeOpts: {
@@ -17,4 +17,23 @@ parent.init();
 const button = document.getElementById('parent-btn');
 button.onclick = () => {
     parent.callIFrameEffect({ name: 'sayHiFromIFrame', args: {} })
+}
+
+const p2 = Parent({
+    iframeOpts: {
+        id: 'iframe2',
+        containerId: 'iframe-container-2',
+        src: 'http://localhost:5502',
+        classes: ['iframe'],
+    },
+    effects: {
+        sayHiFromParent: () => console.log('Hello from parent?')
+    }
+})
+
+p2.init();
+
+const button2 = document.getElementById('parent-btn-2');
+button2.onclick = () => {
+    p2.callIFrameEffect({ name: 'sayHiFromIFrame', args: {} })
 }
