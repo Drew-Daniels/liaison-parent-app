@@ -25,7 +25,6 @@ const parent = Parent({
         }
     }
 });
-parent.init();
 
 const button = document.getElementById('parent-btn-sync');
 button.onclick = () => {
