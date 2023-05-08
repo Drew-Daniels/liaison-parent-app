@@ -13,24 +13,16 @@
     </head>
     <body>
         <h2 class="header">Parent Window</h2>
+        <h3 class="login-status-header header">IFrame User Logged In:</h3>
+        <p id="login-status" class="header">false</p>
         <div class="btns">
-            <button id="parent-btn-sync" class="btn ">
-                Synchronously send a message to the iframe
-                <span class="material-symbols-outlined">
-                    step_into
-                </span>
-            </button>
-            <button id="parent-btn-async" class="btn">
-                Asynchronously send a message to the iframe
+            <button id="logout-button" class="btn ">
+                Request the iframe log the "logged in" iframe user out:
                 <span class="material-symbols-outlined">
                     step_into
                 </span>
             </button>
         </div>
-        <h3 class="header">Synchronous Messages from iframe</h3>
-        <ul id="parent-messages-sync" class="messages"></ul>
-        <h3 class="header">Asynchronous Messages from iframe</h3>
-        <ul id="parent-messages-async" class="messages"></ul>
         <div id="iframe-container">
             <iframe id="iframe" src="http://localhost:5501"></iframe>
         </div>
