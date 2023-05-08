@@ -1,11 +1,59 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+/* Icons */
+
 * {
     font-family: 'Roboto', sans-serif;
 }
 
-.parent-window-header {
+.header {
+    text-align: center;
     font-weight: 300;
 }
 
 .parent-btn {
     font-weight: 400;
+}
+
+#iframe-container {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+#iframe {
+    width: 500px;
+    height: 500px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+}
+
+.btn {
+    width: 20rem;
+    margin-bottom: 1rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.messages {
+
+}
+
+.message {
+    font-weight: 100;
+    text-align: center;
+    list-style: none;
 }
