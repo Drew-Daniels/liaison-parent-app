@@ -5,13 +5,8 @@ function timeout(ms) {
 }
 
 const parent = Parent({
-    iframeOpts: {
-        id: 'iframe',
-        containerId: 'iframe-container',
-        // src: 'https://drew-daniels.github.io/liaison-iframe-app',
-        src: 'http://localhost:5501',
-        classes: ['iframe'],
-    },
+    iframeId: 'iframe',
+    iframeSrc: 'http://localhost:5501',
     effects: {
         sayHiFromParentSync: () => {
             const messagesList = document.getElementById('parent-messages-sync');
