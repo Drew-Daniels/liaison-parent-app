@@ -6,8 +6,10 @@ function setLoginStatus(status) {
 }
 
 const parent = Parent({
-    iframeId: 'iframe',
-    iframeSrc: 'http://localhost:5501',
+    iframe: {
+        id: 'iframe',
+        src: 'http://localhost:5501'
+    },
     effects: {
         onTokenRequested: ({ callIFrameEffect }) => {
             const token = 'xyz';
